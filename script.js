@@ -1,4 +1,7 @@
+// Import Buffer polyfill to satisfy Axios' dependency on Node's Buffer.
 import axios from "axios";
+import { Buffer } from "buffer";
+window.Buffer = Buffer;
 
 // --- Encryption Utilities ---
 // Hard-coded key: exactly 32 ASCII characters.
@@ -383,7 +386,7 @@ function renderResults(results) {
       genButton.textContent = "Generate Links";
       genButton.addEventListener("click", async () => {
         genButton.style.display = "none";
-        // For generate links, create a container with the progress bar ABOVE the progress text.
+        // For generate links, create a container with the progress bar above the progress text.
         const progressBar = document.createElement("progress");
         progressBar.classList.add("linkProgressBar");
         progressBar.max = 100;
