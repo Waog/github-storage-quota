@@ -1,0 +1,17 @@
+{
+  "name": "github-actions-artifacts-ui",
+  "version": "1.0.0",
+  "description": "A frontend tool to view non-expired GitHub Actions artifacts",
+  "scripts": {
+    "start": "parcel index.html --open --no-cache",
+    "build": "parcel build index.html --public-url ./"
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  },
+  "keywords": [],
+  "license": "MIT"
+}

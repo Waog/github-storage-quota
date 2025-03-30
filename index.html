@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GitHub Actions Artifacts UI</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>GitHub Actions Artifacts Viewer</h1>
+      <!-- Token-related UI -->
+      <p>
+        Paste your
+        <a href="https://github.com/settings/tokens/new" target="_blank"
+          >GitHub Personal Access Token</a
+        >
+        (with minimal scopes, e.g. <code>repo</code>) below:
+      </p>
+      <input
+        type="password"
+        id="tokenInput"
+        placeholder="Enter your GitHub Token"
+      />
+      <br />
+      <label id="storeLabel" style="display: none">
+        <input type="checkbox" id="storeTokenCheckbox" />
+        Remember token
+      </label>
+      <br />
+      <button id="deleteTokenButton" style="display: none">
+        Delete remembered token
+      </button>
+      <hr />
+      <!-- Artifact fetching UI -->
+      <button id="fetchButton">Fetch Artifacts</button>
+      <div id="artifactProgressContainer">
+        <progress
+          id="artifactProgressBar"
+          value="0"
+          max="100"
+          style="display: none"
+        ></progress>
+        <br />
+        <div id="artifactProgressText"></div>
+      </div>
+      <hr />
+      <!-- Results -->
+      <div id="output"></div>
+    </div>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
