@@ -2,6 +2,10 @@
 
 A lightweight frontend tool to view non-expired GitHub Actions artifacts across your repositories. It groups artifacts by repository, sorts them by size (largest first), and enables you to generate deep links to workflow run attempts. Optionally, you can store your GitHub token (client-side encrypted) for convenience.
 
+## Demo
+
+View the deployed application at: [https://waog.github.io/github-storage-quota/](https://waog.github.io/github-storage-quota/)
+
 ## Getting Started
 
 ### Prerequisites
